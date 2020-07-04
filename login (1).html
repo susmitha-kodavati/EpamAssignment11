@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<style type="text/css">
+		div{
+			border: double;
+  			text-align: center;
+  			margin-left: 350px;
+   			width: 600px;
+   			height: 270px;
+  			margin-top : 150px;
+  			font-size: 20px;
+		}
+		button{
+			width: 100px;
+			height:25px;
+		}
+	</style>
+	<script>
+		function validate(f) {
+			var possible = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9])+$/;
+		if (!possible.test(f.emailId.value)) {
+		    alert("Please provide a valid email address");
+		    return false;
+		}
+	}
+</script>
+</head>
+<body>
+	<div>
+		<form name="f" onsubmit="return validate(f)">
+			<h1 align="center">Login</h1>
+			<label>Email Id:</label>
+			<input type="email" name="emailId" placeholder="Enter Email Id" ><br><br>
+			<label>Password:</label>
+			<input type="password" name="password" placeholder="Enter Password" ><br><br>
+			<button>Login</button>
+		</form>
+	</div>
+</body>
+</html>
